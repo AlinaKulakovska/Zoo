@@ -5,29 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wild Wonders</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/image 6logo.png">
+
 </head>
 <body>
     <header>
-       <nav>        
-<!-- add cross and remove burger_menu style when pressed  -->
-        <div class="burger_menu">
+        <div>
+        <div class="burger_menu" onclick="burgerMenu()" id="burger">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
         </div>
-
-            <ul>
-            <li><a href=""></a>Map</li>
-            <li><a href=""></a>Prices</li>
-            <li><a href=""></a>About</li>
+       <nav>        
+<!-- add cross and remove burger_menu style when pressed  -->
+        <ul id="navlist" class="nav_list">
+            <li><a href="#">Map</a></li>
+            <li><a href="#">Prices</a></li>
+            <li><a href="#">About</a></li>
         </ul>
     </nav>
-        <img src="./images/image 6logo.png" alt="Logo" width="100px">
+</div>
+        <a href="./index.html"><img src="./images/image 6logo.png" alt="Logo" width="100px" class="logo"></a>
 
         <div class="button">
             <a href="">Buy tickets</a>
         </div>
        
+      
     </header>
+    <script src="./script.js"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@
     --dark_orange:#D25F0E;
     --green: #9CA777;
     --dark-green: #7C9070;
+    --brown:#250F0F;
   }
 
 
@@ -12,6 +13,7 @@
 body{
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 
@@ -25,16 +27,15 @@ background: var(--sand);
 box-shadow: 0px 4px 63px 27px rgba(0, 0, 0, 0.25);
 }
 
-.hide{
-    display: none;
+.logo{
+    transform:  scaleX(-1);
 }
 
 .button{
-
+display: none;
     border-radius: 25px;
 border: 5px solid var(--dark_orange);
 padding: 10px 30px;
-transition: 0.3s ease-out;
 background: var(--orange);
 }
 
@@ -46,22 +47,45 @@ background: var(--orange);
 .button:hover{
     border: 5px solid var(--dark-green);
 background: var(--green);
-animation: 3s ease-in;
+transition: 0.3s ease;
 
 }
 
-nav ul{
+.nav_list{
     list-style: none;
     display: none;
-
-}
-nav ul li{
-    padding-right:15px;
-    font-style: italic;
+    text-align: center;
     font-size: 18px;
 }
+.nav_list li a{
+    padding-right:15px;
+    font-style: italic;
+    text-decoration: none;
+    color: var(--brown);
+}
 
-nav ul li:nth-last-child(1){
+.mobile_list{
+    position: absolute;
+    display: flex;
+    width: 110%;
+    background-color: var(--sand);
+    margin-left: -15%;
+    text-align: center;
+    font-size: 26px;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.mobile_list li{
+    padding-right:0px;
+    padding-bottom: 16px;
+    text-decoration: none;
+}
+.mobile_list li a{
+    padding-right:0px;
+    text-decoration: none;
+}
+
+.nav_list li:nth-last-child(1){
     padding-right:0px;
 }
 
@@ -74,9 +98,12 @@ nav ul li:nth-last-child(1){
     transition: 0.3s ease-out;
 }
 
+
 .line:nth-child(1){
     margin: 0;
 }
+
+
 
 .cross .line:nth-child(1){
     transform: rotate(45deg);
@@ -89,20 +116,28 @@ nav ul li:nth-last-child(1){
 }
 /* desktop version */
 @media screen  and (min-width: 900px) {
-    .button{
-        border-radius: 25px;
-    border: 5px solid var(--dark_orange);
-    padding: 10px 30px;
-    transition: 0.3s ease-out;
-    background: var(--orange);
-    }
 
-    nav ul{
+    .nav_list{
         list-style: none;
         display: flex;
+        position: relative;
+        width: 100%;
+        background-color: transparent;
+        margin-left: 0;
+        flex-direction: row;
     }
 
     .burger_menu, .cross{
         display: none;;
     }
+
+    .nav_list li a{
+        padding-right:15px;
+        font-style: italic;
+        font-size: 18px;
+        text-decoration: none;
+        color: var(--brown);
+    }
+
+    
 }
