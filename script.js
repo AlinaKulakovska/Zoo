@@ -1,6 +1,6 @@
 function burgerMenu() {
-    var element = document.getElementById("burger");
-    var list = document.getElementById("navlist");
+    let element = document.getElementById("burger");
+    let list = document.getElementById("navlist");
 
     if(element.classList.contains("cross") ){
         element.classList.remove("cross");
@@ -11,3 +11,16 @@ function burgerMenu() {
     };
 
   }
+
+  function show(title){
+    let text = document.getElementById(title);
+    if(text.classList.contains("show") ){
+        text.classList.remove("show");
+    }else{
+        text.classList.add("show");
+    };
+
+  }
+
+
+  

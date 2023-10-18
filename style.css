@@ -30,9 +30,7 @@ header {
     box-shadow: 0px 4px 63px 27px rgba(0, 0, 0, 0.25);
 }
 
-.hide {
-    display: none;
-}
+
 
 .button {
     border-radius: 25px;
@@ -48,7 +46,7 @@ header {
 .button a {
     text-decoration: none;
     color: var(--white);
-    
+
 }
 
 .button:hover {
@@ -64,7 +62,7 @@ header {
     text-align: center;
     font-size: 18px;
     padding: 0;
-    
+
 }
 
 .nav_list li a {
@@ -108,7 +106,7 @@ header {
 .line {
     width: 30px;
     height: 5px;
-    background-color:  var(--brown);
+    background-color: var(--brown);
     border-radius: 5px;
     margin-top: 5px;
     transition: 0.3s ease-out;
@@ -132,89 +130,205 @@ header {
     transform: rotate(-45deg) translate(7px, -8px);
 }
 
-.main{
+.main {
     padding-top: 100px;
 }
 
 /*  */
 
-.main,section .button {
+.main,
+section .button {
     margin-left: 30px;
 }
 
-.header{
+.header {
     color: #D25F0E;
-font-family: Jacques Francois Shadow;
-font-size: 64px;
-font-family: 'Jacques Francois Shadow', serif;
-font-weight: 400;
+    font-family: Jacques Francois Shadow;
+    font-size: 60px;
+    font-family: 'Jacques Francois Shadow', serif;
+    font-weight: 400;
 }
 
-.right{
+.right {
     margin-left: 100px;
     margin-top: -50px;
 }
 
-.slogan{
+.slogan {
     font-family: 'Hi Melody', sans-serif;
     font-size: 40px;
     width: 300px;
     font-weight: 400;
 }
-.giraffe{
+
+.giraffe {
     margin-left: 10%;
     width: 90%;
     height: 50%;
 }
 
-.gray_p{
+.gray_p {
     color: #6F6F6F;
-width: 200px;
-font-size: 18px;
-margin-right: 20px;
-text-align: right;
-float: right;
+    width: 200px;
+    font-size: 18px;
+    margin-right: 20px;
+    text-align: right;
+    float: right;
 }
+
 /*  */
-.about{
+.about {
     margin: 100px 30px 0 30px;
     text-align: justify;
 }
 
-.about h3{
+.about h3 {
     text-align: center;
 }
 
-.about img{
-float: left;
-width: 400px;
-margin-right: 50px;
+.about img {
+    float: left;
+    width: 400px;
+    margin-right: 50px;
 }
 
 
 /*  */
 
-.activities{
+.activities {
     background-color: var(--green);
     margin: 80px 10%;
     padding: 10px 30px;
 }
-.activities .header{
- text-align: center;
- font-size: 48px;
+
+.activities .header {
+    font-size: 48px;
 }
 
-.activities ul li, .activities p{
+.activities ul li,
+.activities p {
     font-size: 20px;
-   }
-.activities ul li span{
+}
+
+.activities ul li span {
     font-weight: bold;
 }
 
-.activities .button{
+.activities .button {
     margin: 30px auto;
 }
+/*  */
+.center {
+    text-align: center;
+}
 
+.news-img {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    margin: auto;
+}
+
+
+
+.news-item {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 300px;
+    text-align: justify;
+    box-shadow: 0px 15px 15px 10px rgba(0, 0, 0, 0.25);
+    margin: 30px 30px;
+}
+
+.news{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.tag{
+    clip-path: polygon(100% 0, 0 100%, 0 0);
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: var(--dark-green);
+    color: #ffffff;
+    font-size:  24px;
+}
+
+.tag p{
+    transform: rotate(-45deg);
+}
+
+/*  */
+
+
+.faq-item{
+    width: 80%;
+    min-height: 60px;
+    border-radius: 25px;
+    background-color: var(--dark-green);
+    font-family: Hi Melody;
+    margin: 10px auto;
+    align-items: center;
+}
+.faq-header{
+    display: flex;
+    justify-content: space-between;
+} 
+
+.faq-text{
+    display: none;
+    padding: 0 0 10px 20px;
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+.faq-item:nth-child(2){
+    background-color: var(--green);
+}
+
+.faq-item:nth-child(3){
+    background-color: var(--sand);
+}
+
+.faq-item h3{
+    font-size: 32px;
+    padding-left: 30px;
+}
+
+.circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: var(--sand);
+    margin-right: 20px;
+    text-align: center;
+    font-size: 36px;
+    margin-top: 25px;
+}
+
+.second{
+    background-color: var(--dark-green);
+    color: var(--sand);
+}
+.third{
+    background-color: var(--green);
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--sand);
+    padding: 10px 10%;
+    align-items: center;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+}
 /* desktop version */
 @media screen and (min-width: 800px) {
 
@@ -245,46 +359,54 @@ margin-right: 50px;
         text-decoration: none;
         color: var(--brown);
     }
-    .header{
-    font-size: 60px;
+
+    .header {
+        font-size: 60px;
     }
-    .slogan{
+
+    .slogan {
         font-family: 'Hi Melody', sans-serif;
         font-size: 38px;
         width: 300px;
         font-weight: 400;
     }
-    .giraffe{
+
+    .giraffe {
         margin-left: 50%;
         top: 200px;
         width: 50%;
         height: 70%;
         position: absolute;
     }
-    .gray_p{
-    float: none;
-    margin-bottom: 30px;
-    font-size: 21px;
-    margin-left: 100px;
-    width: 300px;
+
+    .gray_p {
+        float: none;
+        margin-bottom: 30px;
+        font-size: 21px;
+        margin-left: 100px;
+        width: 300px;
     }
 
-    .main,section .button {
+    .main,
+    section .button {
         margin-left: 50px;
     }
-    .about{
+
+    .about {
         margin: 100px 130px 0 130px;
     }
-    .about img{
+
+    .about img {
         float: left;
         width: 250px;
         margin-right: 50px;
-        }
+    }
+
 }
 
 @media screen and (min-width: 1100px) {
 
-    .giraffe{
+    .giraffe {
         margin-left: 45%;
         top: 150px;
         width: 55%;
@@ -292,31 +414,38 @@ margin-right: 50px;
         position: absolute;
     }
 
-    .header{
+    .header {
         font-size: 74px;
-        }
-   
-        .right{
-            margin-left: 120px;
-            margin-top: -80px;
-        }
-         
-        .slogan{
+    }
 
-            font-size: 40px;
-            width: 400px;
-        }
+    .right {
+        margin-left: 120px;
+        margin-top: -80px;
+    }
 
-        .gray_p{
-            margin: 50px 0;
-            font-size: 21px;
-            margin-left: 100px;
-            width: 300px;
-            }
+    .slogan {
 
-            section .button {
-                margin-left: 200px; 
-                 margin-top: 50px;
-            }
+        font-size: 40px;
+        width: 400px;
+    }
 
+    .gray_p {
+        margin: 50px 0;
+        font-size: 21px;
+        margin-left: 100px;
+        width: 300px;
+    }
+
+    section .button {
+        margin-left: 200px;
+        margin-top: 50px;
+    }
+
+}
+
+.hide {
+    display: none;
+}
+.show{
+    display: flex;
 }
