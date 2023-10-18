@@ -2,122 +2,223 @@
     --sand: #FBEEC1;
     --white: #ffffff;
     --orange: #F97B22;
-    --dark_orange:#D25F0E;
+    --dark_orange: #D25F0E;
     --green: #9CA777;
     --dark-green: #7C9070;
-    --brown:#250F0F;
-  }
+    --brown: #250F0F;
+}
 
 
 
-body{
+body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    color: var(--brown);
 }
 
 
-header{
+header {
     display: flex;
     justify-content: space-between;
-align-items: center;
-padding: 10px 30px;
-background: var(--sand);
-
-box-shadow: 0px 4px 63px 27px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    padding: 10px 30px;
+    background: var(--sand);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0px 4px 63px 27px rgba(0, 0, 0, 0.25);
 }
 
-.logo{
-    transform:  scaleX(-1);
+.hide {
+    display: none;
 }
 
-.button{
-display: none;
+.button {
     border-radius: 25px;
-border: 5px solid var(--dark_orange);
-padding: 10px 30px;
-background: var(--orange);
+    border: 5px solid var(--dark_orange);
+    padding: 10px 30px;
+    background: var(--orange);
+    width: 100px;
+    height: 20px;
+
+    text-align: center;
 }
 
-.button a{
+.button a {
     text-decoration: none;
     color: var(--white);
+    
 }
 
-.button:hover{
+.button:hover {
     border: 5px solid var(--dark-green);
-background: var(--green);
-transition: 0.3s ease;
+    background: var(--green);
+    transition: 0.3s ease;
 
 }
 
-.nav_list{
+.nav_list {
     list-style: none;
     display: none;
     text-align: center;
     font-size: 18px;
+    padding: 0;
+    
 }
-.nav_list li a{
-    padding-right:15px;
+
+.nav_list li a {
+    margin-right: 15px;
     font-style: italic;
     text-decoration: none;
     color: var(--brown);
 }
 
-.mobile_list{
+.nav_list li:nth-last-child(1) {
+    margin-right: 0px;
+}
+
+.mobile_list {
+    margin-top: 50px;
     position: absolute;
     display: flex;
-    width: 110%;
+    width: 100%;
     background-color: var(--sand);
-    margin-left: -15%;
+    margin-left: -30px;
     text-align: center;
     font-size: 26px;
     flex-direction: column;
     padding-top: 20px;
+
 }
-.mobile_list li{
-    padding-right:0px;
+
+.mobile_list li {
+    padding-right: 0px;
     padding-bottom: 16px;
     text-decoration: none;
 }
-.mobile_list li a{
-    padding-right:0px;
+
+.mobile_list li a {
+    padding-right: 0px;
     text-decoration: none;
 }
 
-.nav_list li:nth-last-child(1){
-    padding-right:0px;
-}
 
-.line{
+
+.line {
     width: 30px;
     height: 5px;
-    background-color: black;
+    background-color:  var(--brown);
     border-radius: 5px;
     margin-top: 5px;
     transition: 0.3s ease-out;
 }
 
-
-.line:nth-child(1){
+.line:nth-child(1) {
     margin: 0;
 }
 
 
 
-.cross .line:nth-child(1){
+.cross .line:nth-child(1) {
     transform: rotate(45deg);
 }
-.cross .line:nth-child(2){
+
+.cross .line:nth-child(2) {
     display: none;
 }
-.cross .line:nth-child(3){
+
+.cross .line:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -8px);
 }
-/* desktop version */
-@media screen  and (min-width: 900px) {
 
-    .nav_list{
+.main{
+    padding-top: 100px;
+}
+
+/*  */
+
+.main,section .button {
+    margin-left: 30px;
+}
+
+.header{
+    color: #D25F0E;
+font-family: Jacques Francois Shadow;
+font-size: 64px;
+font-family: 'Jacques Francois Shadow', serif;
+font-weight: 400;
+}
+
+.right{
+    margin-left: 100px;
+    margin-top: -50px;
+}
+
+.slogan{
+    font-family: 'Hi Melody', sans-serif;
+    font-size: 40px;
+    width: 300px;
+    font-weight: 400;
+}
+.giraffe{
+    margin-left: 10%;
+    width: 90%;
+    height: 50%;
+}
+
+.gray_p{
+    color: #6F6F6F;
+width: 200px;
+font-size: 18px;
+margin-right: 20px;
+text-align: right;
+float: right;
+}
+/*  */
+.about{
+    margin: 100px 30px 0 30px;
+    text-align: justify;
+}
+
+.about h3{
+    text-align: center;
+}
+
+.about img{
+float: left;
+width: 400px;
+margin-right: 50px;
+}
+
+
+/*  */
+
+.activities{
+    background-color: var(--green);
+    margin: 80px 10%;
+    padding: 10px 30px;
+}
+.activities .header{
+ text-align: center;
+ font-size: 48px;
+}
+
+.activities ul li, .activities p{
+    font-size: 20px;
+   }
+.activities ul li span{
+    font-weight: bold;
+}
+
+.activities .button{
+    margin: 30px auto;
+}
+
+/* desktop version */
+@media screen and (min-width: 800px) {
+
+    .nav_list {
         list-style: none;
         display: flex;
         position: relative;
@@ -127,17 +228,95 @@ transition: 0.3s ease;
         flex-direction: row;
     }
 
-    .burger_menu, .cross{
-        display: none;;
+    .hide {
+        display: flex;
     }
 
-    .nav_list li a{
-        padding-right:15px;
+    .burger_menu,
+    .cross {
+        display: none;
+        ;
+    }
+
+    .nav_list li a {
+        padding-right: 15px;
         font-style: italic;
         font-size: 18px;
         text-decoration: none;
         color: var(--brown);
     }
+    .header{
+    font-size: 60px;
+    }
+    .slogan{
+        font-family: 'Hi Melody', sans-serif;
+        font-size: 38px;
+        width: 300px;
+        font-weight: 400;
+    }
+    .giraffe{
+        margin-left: 50%;
+        top: 200px;
+        width: 50%;
+        height: 70%;
+        position: absolute;
+    }
+    .gray_p{
+    float: none;
+    margin-bottom: 30px;
+    font-size: 21px;
+    margin-left: 100px;
+    width: 300px;
+    }
 
-    
+    .main,section .button {
+        margin-left: 50px;
+    }
+    .about{
+        margin: 100px 130px 0 130px;
+    }
+    .about img{
+        float: left;
+        width: 250px;
+        margin-right: 50px;
+        }
+}
+
+@media screen and (min-width: 1100px) {
+
+    .giraffe{
+        margin-left: 45%;
+        top: 150px;
+        width: 55%;
+        height: 85%;
+        position: absolute;
+    }
+
+    .header{
+        font-size: 74px;
+        }
+   
+        .right{
+            margin-left: 120px;
+            margin-top: -80px;
+        }
+         
+        .slogan{
+
+            font-size: 40px;
+            width: 400px;
+        }
+
+        .gray_p{
+            margin: 50px 0;
+            font-size: 21px;
+            margin-left: 100px;
+            width: 300px;
+            }
+
+            section .button {
+                margin-left: 200px; 
+                 margin-top: 50px;
+            }
+
 }
