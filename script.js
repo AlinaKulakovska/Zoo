@@ -28,16 +28,14 @@ const slide = document.querySelector(".slide");
 const prevButton = document.getElementById("slide-arrow-prev");
 const nextButton = document.getElementById("slide-arrow-next");
 
-nextButton.addEventListener("click", () => {
-  const slideWidth = slide.clientWidth;
-  slidesContainer.scrollLeft += slideWidth;
-});
-
-prevButton.addEventListener("click", () => {
-  const slideWidth = slide.clientWidth;
-  slidesContainer.scrollLeft -= slideWidth;
-});
-
+function nextButtonfunc(){
+    const slideWidth = slide.clientWidth;
+    slidesContainer.scrollLeft += slideWidth;
+}
+function prevButtonfunc(){
+    const slideWidth = slide.clientWidth;
+    slidesContainer.scrollLeft -= slideWidth;
+}
 
 window.addEventListener('resize', function(){
     const slideWidth = '10000px';
@@ -52,7 +50,7 @@ function getResults() {
     fetch(`https://api.exchangerate-api.com/v4/latest/USD`)
         .then(currency =>  currency.json())
         .then(currency => {
-            
+            console.log("asd")
             let fromRate = currency.rates['USD'];
             let toRate = currency.rates['UAH'];
             price.forEach(element => {
