@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild Wonders</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/image 6logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&family=Jacques+Francois+Shadow&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="burger_menu" onclick="burgerMenu()" id="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <nav>
+                <!-- add cross and remove burger_menu style when pressed  -->
+                <ul id="navlist" class="nav_list">
+                    <li><a href="#">Map</a></li>
+                    <li><a href="#">Prices</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+            </nav>
+        </div>
+        <a href="./index.html"><img src="./images/Group 21logo2.png" alt="Logo" width="180px" class="logo"></a>
+
+        <div class="button">
+            <a href="">Buy tickets</a>
+        </div>
+    </header>
+    <div class="price_img">
+        <img src="./images/image 15prices.png" alt="">
+    </div>
+
+
+    <table>
+        <tr>
+            <th>Ticket Type</th>
+            <th>Online Price</th>
+            <th>Gate Price</th>
+        </tr>
+        <tr>
+            <th>Adult (16-64)</th>
+            <td><span class="price">$20.99</span> <span class="result"></span></td>
+            <td><span class="price">$23.99</span>  <span class="result"></span></td>
+        </tr>
+        <tr>
+            <th>Child (3-15)</th>
+            <td><span class="price">$12.99</span>  <span class="result"></span></td>
+            <td><span class="price">$15.99</span>  <span class="result"></span></td>
+        </tr>
+        <tr>
+            <th>Senior (65+)</th>
+            <td><span class="price">$12.99</span> <span class="result"></span></td>
+            <td><span class="price">$15.99</span> <span class="result"></span></td>
+        </tr>
+        <tr>
+            <th>Student (with valid ID)</th>
+            <td><span class="price">$14.99</span> <span class="result"></span></td>
+            <td><span class="price">$17.99</span> <span class="result"></span></td>
+        </tr>
+        <tr>
+            <th>Family of Four (2 adults, 2 children)</th>
+            <td><span class="price">$59.99</span> <span class="result"></span></td>
+            <td><span class="price">$65.99</span> <span class="result"></span></td>
+        </tr>
+    </table>
+
+    <h3>Additional Information:</h3>
+    <ul>
+        <li>Children under 3 are free.
+        </li>
+        <li> Car parking is available at $3.00 per car per day.</li>
+        <li> Bikes, rollerblades, scooters, self-propelled sit-on toys, and footballs are NOT allowed in the zoo for
+            safety reasons.
+        </li>
+    </ul>
+
+    <footer>
+        <ul>
+            <li>About Us</li>
+            <li>Animals</li>
+            <li>Exhibits</li>
+            <li>Educational Programs</li>
+            <li>Donate</li>
+        </ul>
+        <img src="./images/Group 21logo2.png" alt="logo">
+        <ul>
+            <li>+ 380 98 123 45 67</li>
+
+
+            <li>qwerty@gmail.com</li>
+            <li>Qwerty street 34, 3b</li>
+        </ul>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
