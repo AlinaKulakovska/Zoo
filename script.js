@@ -40,6 +40,7 @@ prevButton.addEventListener("click", () => {
 
 
 window.addEventListener('resize', function(event){
-    slidesContainer.style.width = slide.clientWidth + 'px';
-    console.log(slidesContainer.style.width)
+    const slideWidth = '10000px';
+    slidesContainer.scrollLeft -= slideWidth;
+
   });
