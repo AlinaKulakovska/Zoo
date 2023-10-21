@@ -37,3 +37,9 @@ prevButton.addEventListener("click", () => {
   const slideWidth = slide.clientWidth;
   slidesContainer.scrollLeft -= slideWidth;
 });
+
+
+window.addEventListener('resize', function(event){
+    slidesContainer.style.width = slide.clientWidth + 'px';
+    console.log(slidesContainer.style.width)
+  });
