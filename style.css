@@ -44,6 +44,7 @@ header {
 
 header .button{
     margin-right: -20px;
+    transition: 0.2s ease;
 }
 
 .button a {
@@ -55,7 +56,7 @@ header .button{
 .button:hover {
     border: 5px solid var(--dark-green);
     background: var(--green);
-    transition: 0.3s ease;
+    transition: 0.5s ease;
 
 }
 
@@ -96,13 +97,15 @@ header .button{
     padding-right: 0px;
     padding-bottom: 16px;
     text-decoration: none;
+
+
 }
 
 .mobile_list li a {
     padding-right: 0px;
     text-decoration: none;
-}
 
+}
 
 
 .line {
@@ -112,16 +115,14 @@ header .button{
     border-radius: 5px;
     margin-top: 5px;
     transition: 0.3s ease-out;
-}
-
-.line:nth-child(1) {
-    margin: 0;
+    margin-left: 15px;
 }
 
 
 
 .cross .line:nth-child(1) {
     transform: rotate(45deg);
+    
 }
 
 .cross .line:nth-child(2) {
@@ -136,8 +137,124 @@ header .button{
     padding-top: 100px;
 }
 
-/*  */
+/* modal */
+.mod_container{
+    display: flex;
+    justify-content: center;
+}
 
+.monkey{
+    display: none;
+}
+
+
+.modal {
+    display: flex;
+    justify-content: center;
+    min-height: 350px;
+    position: fixed;
+    z-index: 2;
+    top: 30%;
+    margin: 0 10%;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden; 
+    max-width: 700px;
+    animation-name: modal;
+    animation-duration: 1s;
+ 
+  }
+
+  @keyframes modal {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+  }
+
+  .modal_Link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal_Link a{
+    padding: 10px;
+  }
+
+  .modal input {
+    margin-top: 30px;
+    padding: 0.7rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9em;
+  }
+  
+  .modalText{
+    padding: 15px;
+    text-align: center;
+  }
+
+  .modalText h2{
+    color: var(--dark-green);
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .modalText p{
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  button {
+    cursor: pointer;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 1.4rem;
+    font-weight: 700;
+    background-color: var(--dark-green);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1em;
+    margin: 10px;
+  }
+  
+  
+  .btn-close {
+    transform: translate(10px, -20px);
+    padding: 0.5rem 0.7rem;
+    background: lightgray;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 0;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+
+/*  */
 .main,
 section .button {
     margin-left: 30px;
@@ -458,7 +575,12 @@ td{
 
 /* desktop version */
 @media screen and (min-width: 800px) {
-
+    .monkey{
+        width: 300px;
+        height: 100%;
+        display: flex;
+    }
+    
     .nav_list {
         list-style: none;
         display: flex;

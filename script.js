@@ -1,17 +1,44 @@
 function burgerMenu() {
     let element = document.getElementById("burger");
     let list = document.getElementById("navlist");
-
     if(element.classList.contains("cross") ){
+        // open
         element.classList.remove("cross");
-        list.classList.remove("mobile_list")
+        list.classList.remove("mobile_list");
+
     }else{
+        // closed
         element.classList.add("cross");
-        list.classList.add("mobile_list")
+        list.classList.add("mobile_list");
     };
 
   }
 
+
+  const modal = document.querySelector(".modal");
+  const overlay = document.querySelector(".overlay");
+  const closeModalBtn = document.querySelector(".btn-close");
+  modal.classList.add("animation")
+  // close modal function
+  const closeModal = function () {
+    modal.classList.add("hidden");
+    overlay.classList.add("hidden");
+  };
+  
+  // close the modal when the close button and overlay is clicked
+  closeModalBtn.addEventListener("click", closeModal);
+  overlay.addEventListener("click", closeModal);
+  
+  // close modal when the Esc key is pressed
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+      closeModal();
+    }
+  });
+  
+
+
+  
   function show(title){
     let text = document.getElementById(title);
     if(text.classList.contains("show") ){
