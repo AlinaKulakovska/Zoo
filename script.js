@@ -1,3 +1,25 @@
+var price = document.querySelectorAll('.price');
+var result = document.querySelectorAll('.result');
+let x = 0;
+function getResults() {
+    fetch(`https://api.exchangerate-api.com/v4/latest/USD`)
+        .then(currency =>  currency.json())
+        .then(currency => {
+            let fromRate = currency.rates['USD'];
+            let toRate = currency.rates['UAH'];
+            price.forEach(element => {
+                element = Number(element.innerText.slice(1))
+                element = '= ₴' + ((toRate / fromRate) * element).toFixed(2);
+                result[x].innerText = element;
+                x++;
+            })
+        
+        })
+}
+getResults()
+
+
+
 function burgerMenu() {
     let element = document.getElementById("burger");
     let list = document.getElementById("navlist");
@@ -18,7 +40,7 @@ function burgerMenu() {
   const modal = document.querySelector(".modal");
   const overlay = document.querySelector(".overlay");
   const closeModalBtn = document.querySelector(".btn-close");
-  modal.classList.add("animation")
+  modal.classList.add("animation");
   // close modal function
   const closeModal = function () {
     modal.classList.add("hidden");
@@ -68,28 +90,6 @@ window.addEventListener('resize', function(){
     const slideWidth = '10000px';
     slidesContainer.scrollLeft -= slideWidth;
 });
-
-
-var price = document.querySelectorAll('.price');
-var result = document.querySelectorAll('.result');
-let x = 0;
-function getResults() {
-    fetch(`https://api.exchangerate-api.com/v4/latest/USD`)
-        .then(currency =>  currency.json())
-        .then(currency => {
-            console.log("asd")
-            let fromRate = currency.rates['USD'];
-            let toRate = currency.rates['UAH'];
-            price.forEach(element => {
-                element = Number(element.innerText.slice(1))
-                element = '= ₴' + ((toRate / fromRate) * element).toFixed(2);
-                result[x].innerText = element;
-                x++;
-            })
-        
-        })
-}
-getResults()
 
 
 
