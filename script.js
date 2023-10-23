@@ -1,3 +1,4 @@
+// currency convertor 
 var price = document.querySelectorAll('.price');
 var result = document.querySelectorAll('.result');
 let x = 0;
@@ -17,19 +18,37 @@ function getResults() {
         })
 }
 getResults()
+// validation
+const subscribe = document.getElementById("Subscribe");
 
+subscribe.addEventListener("click", validate);
 
+function validate(e) {
+  e.preventDefault();
 
+  const MailField = document.getElementById("email");
+  let valid = true;
+
+  if (!MailField.value) {
+    const nameError = document.getElementById("nameError");
+    nameError.classList.add("visible");
+    MailField.classList.add("invalid");
+    nameError.setAttribute("aria-hidden", false);
+    nameError.setAttribute("aria-invalid", true);
+  }
+  return valid;}
+
+// 
 function burgerMenu() {
     let element = document.getElementById("burger");
     let list = document.getElementById("navlist");
     if(element.classList.contains("cross") ){
-        // open
+        // open menu
         element.classList.remove("cross");
         list.classList.remove("mobile_list");
 
     }else{
-        // closed
+        // closed menu
         element.classList.add("cross");
         list.classList.add("mobile_list");
     };
@@ -40,7 +59,6 @@ function burgerMenu() {
   const modal = document.querySelector(".modal");
   const overlay = document.querySelector(".overlay");
   const closeModalBtn = document.querySelector(".btn-close");
-  modal.classList.add("animation");
   // close modal function
   const closeModal = function () {
     modal.classList.add("hidden");
@@ -60,7 +78,7 @@ function burgerMenu() {
   
 
 
-  
+//   faq text
   function show(title){
     let text = document.getElementById(title);
     if(text.classList.contains("show") ){
@@ -71,7 +89,7 @@ function burgerMenu() {
 
   }
 
-
+// caorusel
 const slidesContainer = document.getElementById("slides-container");
 const slide = document.querySelector(".slide");
 const prevButton = document.getElementById("slide-arrow-prev");

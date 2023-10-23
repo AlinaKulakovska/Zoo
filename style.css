@@ -164,7 +164,18 @@ header .button{
     animation-duration: 1s;
  
   }
-
+  #nameError {
+    display: none;
+    font-size: 0.8em;
+  }
+  
+  #nameError.visible {
+    display: block;
+  }
+  
+  input.invalid {
+    border-color: red;
+  }
   @keyframes modal {
     from {
         transform: scale(0.5);
