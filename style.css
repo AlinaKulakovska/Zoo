@@ -274,20 +274,19 @@ section .button {
 
 .header {
     color: #D25F0E;
-    font-family: Jacques Francois Shadow;
-    font-size: 60px;
+    font-size: 54px;
     font-family: 'Jacques Francois Shadow', serif;
     font-weight: 400;
 }
 
 .right {
-    margin-left: 100px;
+    margin-left: 75px;
     margin-top: -50px;
 }
 
 .slogan {
     font-family: 'Hi Melody', sans-serif;
-    font-size: 40px;
+    font-size: 36px;
     width: 300px;
     font-weight: 400;
 }
@@ -301,7 +300,7 @@ section .button {
 
 .gray_p {
     color: #6F6F6F;
-    width: 200px;
+    width: 180px;
     font-size: 18px;
     margin-right: 20px;
     text-align: right;
@@ -320,7 +319,7 @@ section .button {
 
 .about img {
     float: left;
-    width: 400px;
+    width: 100%;
     margin-right: 50px;
 }
 
