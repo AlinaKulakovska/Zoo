@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild Wonders - Map</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/image 6logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&family=Jacques+Francois+Shadow&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="burger_menu" onclick="burgerMenu()" id="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <nav>
+                <!-- add cross and remove burger_menu style when pressed  -->
+                <ul id="navlist" class="nav_list">
+                    <li><a href="./Map.html">Map</a></li>
+                    <li><a href="./Prices.html">Prices</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+            </nav>
+        </div>
+        <a href="./index.html"><img src="./images/Group 21logo2.png" alt="Logo" width="180px" class="logo"></a>
+
+        <div class="button">
+            <a href="./Tickets.html">Buy tickets</a>
+        </div>
+    </header>
+
+    <from class="radioform">
+          <input type="radio" id="bears" name="radio" value="0" checked/>
+
+          <input type="radio" id="monkeys" name="radio" value="1" />
+
+          <input type="radio" id="snakes" name="radio" value="2" />
+
+      </from>
+      
+    
+<div class="mapContainer">
+    <img src="./images/image 14map.png" alt="map" class="map">
+<div>
+    <div class="mapInfo">
+        <h3 id="territoryName"></h3>
+        <p id="territoryDescription"></p>
+       </div>
+</div>
+</div>
+
+
+
+  
+    <script src="./script.js"></script>
+</body>
+
+</html>

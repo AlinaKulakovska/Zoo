@@ -19,6 +19,8 @@ function getResults() {
 }
 getResults()
 
+
+
 function burgerMenu() {
     let element = document.getElementById("burger");
     let list = document.getElementById("navlist");
@@ -34,6 +36,26 @@ function burgerMenu() {
     };
 
   }
+
+  fetch('./map.json')
+    .then((response) => response.json())
+    .then((json) => {
+  var rad = document.getElementsByName("radio");
+  var prev = null;
+  var territoryName = document.getElementById("territoryName");
+  var territoryDescription = document.getElementById("territoryDescription");
+  for (var i = 0; i < rad.length; i++) {
+      rad[i].addEventListener('change', function() {
+          (prev) ? console.log(): null;
+          if (this !== prev) {
+              prev = this;
+          }
+          let num = this.value;
+          territoryName.innerText = json[num].title;
+          territoryDescription.innerText = json[num].description;
+      });
+  }
+  });
 
 
   const modal = document.querySelector(".modal");
