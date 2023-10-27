@@ -233,6 +233,7 @@ header .button{
     text-align: center;
     font-size: 1em;
     margin: 10px;
+    cursor: pointer;
   }
   
   
@@ -458,7 +459,7 @@ section .button {
   }
   
   .slides-container {
-    height: calc(100vh - 5rem);
+    height: calc(100vh - 10rem);
     width: 100%;
     display: flex;
     overflow: hidden;

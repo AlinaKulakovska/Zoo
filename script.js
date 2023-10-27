@@ -18,27 +18,7 @@ function getResults() {
         })
 }
 getResults()
-// validation
-const subscribe = document.getElementById("Subscribe");
 
-subscribe.addEventListener("click", validate);
-
-function validate(e) {
-  e.preventDefault();
-
-  const MailField = document.getElementById("email");
-  let valid = true;
-
-  if (!MailField.value) {
-    const nameError = document.getElementById("nameError");
-    nameError.classList.add("visible");
-    MailField.classList.add("invalid");
-    nameError.setAttribute("aria-hidden", false);
-    nameError.setAttribute("aria-invalid", true);
-  }
-  return valid;}
-
-// 
 function burgerMenu() {
     let element = document.getElementById("burger");
     let list = document.getElementById("navlist");
@@ -59,6 +39,7 @@ function burgerMenu() {
   const modal = document.querySelector(".modal");
   const overlay = document.querySelector(".overlay");
   const closeModalBtn = document.querySelector(".btn-close");
+
   // close modal function
   const closeModal = function () {
     modal.classList.add("hidden");
@@ -94,7 +75,6 @@ const slidesContainer = document.getElementById("slides-container");
 const slide = document.querySelector(".slide");
 const prevButton = document.getElementById("slide-arrow-prev");
 const nextButton = document.getElementById("slide-arrow-next");
-
 function nextButtonfunc(){
     const slideWidth = slide.clientWidth;
     slidesContainer.scrollLeft += slideWidth;
