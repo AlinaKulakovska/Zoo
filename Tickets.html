@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wild Wonders - Map</title>
+    <title>Wild Wonders - Tickets</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./images/image 6logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,10 +40,31 @@
         </div>
     </header>
 
+    <h1 class="header center">Buy Tickets</h1>
+    <form class="ticketsForm" id="formElem">
 
-
-
-    
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required maxlength="50" placeholder="Enter your name">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+        
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" placeholder="Enter your Comments"></textarea>
+        
+        <label for="product">Ticket type:</label>
+        <select id="product" name="product">
+        <option value="20">Regular</option>
+        <option value="40">Family</option>
+        <option value="15">Student</option>
+        </select>
+        
+        <label for="quantity" >Quantity:</label>
+        <input type="number" required id="quantity" name="quantity" max="10" min="1" placeholder="Enter the quantity">
+        
+        <button onclick="buying()" class="button submit" value="buy">BUY</button>
+        
+        </form>        
 
     <footer>
         <ul>

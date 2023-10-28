@@ -37,6 +37,8 @@ function burgerMenu() {
 
   }
 
+
+  // map
   fetch('./map.json')
     .then((response) => response.json())
     .then((json) => {
@@ -57,7 +59,22 @@ function burgerMenu() {
   }
   });
 
+// Buying form
+function buying(){
 
+  event.preventDefault();
+  let type = document.getElementById("product").value;
+  let comments = document.getElementById("comments").value;
+  let data = Array.from(document.querySelectorAll('#formElem input')).reduce((acc, input) => ({...acc, type, comments, [input.id]:input.value}), {});
+  let sum = Number(data.type) * Number(data.quantity)
+  
+  const mailtoLink = `mailto:${data.email}?subject=${encodeURIComponent("Zoo tickets for " + data.name)}&body=${encodeURIComponent("Your " + data.quantity + " tickets will cost " + sum + "\n" + data.comments)}`;
+  
+  window.location.href = mailtoLink;
+
+}
+
+// 
   const modal = document.querySelector(".modal");
   const overlay = document.querySelector(".overlay");
   const closeModalBtn = document.querySelector(".btn-close");
